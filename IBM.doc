@@ -1,0 +1,32 @@
+package examples;
+import java.util.Scanner;
+public class IBM {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		double weightInKilograms,
+			heightInMeters,
+			index;
+		
+		System.out.println("BMI VALUES");
+		System.out.println("Underweight: Less than 18.5");
+		System.out.println("Normal: Between 18.5 to 24.9");
+		System.out.println("Overweight: Between 25 to 29.9");
+		System.out.println("Obese: 30 or greater");
+
+		System.out.println();
+
+		System.out.print("Enter your body weight: ");
+		weightInKilograms = input.nextDouble();
+		
+
+		
+		System.out.print("Enter your body height: ");
+		heightInMeters = input.nextDouble();
+		
+		index = (weightInKilograms/(heightInMeters * heightInMeters));
+		System.out.printf("%s: %f%n", "Your Body Mass Index is", index);
+	}
+
+}
